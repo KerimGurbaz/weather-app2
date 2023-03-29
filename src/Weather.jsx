@@ -15,3 +15,11 @@ const Weather = () => {
       setError('City not found. Please try again.');
     }
   };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter a city name" value={city} onChange={(e) => setCity(e.target.value)} />
+        <button type="submit">Search</button>
+      </form>
+      {error && <p>{error}</p>}
