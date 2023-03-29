@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Weather = () => {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState({});
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`);
+      const response = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`
+      );
       const data = await response.json();
       setWeatherData(data);
-      setError('');
+      setError("");
     } catch (error) {
-      setError('City not found. Please try again.');
+      setError("City not found. Please try again.");
     }
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Enter a city name" value={city} onChange={(e) => setCity(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Enter a city name"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
         <button type="submit">Search</button>
       </form>
       {error && <p>{error}</p>}
@@ -30,3 +37,8 @@ const Weather = () => {
           <p>Description: {weatherData.weather[0].description}</p>
         </div>
       )}
+    </div>
+  );
+};
+
+export default Weather;
