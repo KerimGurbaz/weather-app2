@@ -8,7 +8,7 @@ const Weather = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2b6fc034709f70ad0e769dd70ac76d07`
       );
       const data = await response.json();
       setWeatherData(data);
