@@ -23,3 +23,10 @@ const Weather = () => {
         <button type="submit">Search</button>
       </form>
       {error && <p>{error}</p>}
+      {weatherData.name && (
+        <div>
+          <p>City: {weatherData.name}</p>
+          <p>Temperature: {weatherData.main.temp}</p>
+          <p>Description: {weatherData.weather[0].description}</p>
+        </div>
+      )}
