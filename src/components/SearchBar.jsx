@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  const [city, setCity] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (searchTerm.trim()) {
-      onSearch(searchTerm);
-      setSearchTerm("");
+    if (city) {
+      onSearch(city);
+      setCity("");
     }
   };
 
@@ -20,9 +16,9 @@ const SearchBar = ({ onSearch }) => {
     <form className="search-bar" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Şehir adı girin..."
-        value={searchTerm}
-        onChange={handleChange}
+        placeholder="Şehir ismi girin..."
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
       />
       <button type="submit">Ara</button>
     </form>
