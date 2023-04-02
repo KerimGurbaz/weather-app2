@@ -22,6 +22,7 @@ const WeatherApp = () => {
           country: data.sys.country,
           temperature: data.main.temp,
           weather: data.weather[0].description,
+          icon: data.weather[0].icon,
         };
 
         if (!cities.some((city) => city.id === cityData.id)) {
