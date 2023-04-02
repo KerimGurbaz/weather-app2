@@ -32,11 +32,11 @@ const WeatherApp = () => {
             setCities((prevCities) => [cityData, ...prevCities]);
           }
         } else {
-          alert("Bu şehir zaten listelenmiş.");
+          alert("This city is already listed.");
         }
       }
     } catch (error) {
-      alert("Hava durumu verisi alınamadı, lütfen şehir adını kontrol edin.");
+      alert("Failed to get weather data, please check city name.");
     }
   };
 

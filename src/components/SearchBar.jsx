@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
     <form className="search-bar" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Şehir ismi girin..."
+        placeholder="Enter city name..."
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
