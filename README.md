@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Click Me!!](https://weatherapp202.netlify.app).
+[Click Me!!](https://weatherapp202.netlify.app)
 
 
 <img width="1133" alt="Screenshot 2023-04-02 at 22 40 03" src="https://user-images.githubusercontent.com/101603320/229378204-42900f9d-dbed-4d6e-a830-a6e385c4dec9.png">
