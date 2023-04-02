@@ -1,14 +1,12 @@
 
+import React from 'react';
 import './App.css';
-import Header from './header/Header';
-import Weather from './Weather';
+import WeatherApp from './components/WeatherApp';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Weather/>
-
+      <WeatherApp />
     </div>
   );
 }
