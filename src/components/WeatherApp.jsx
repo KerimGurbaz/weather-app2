@@ -13,6 +13,7 @@ const WeatherApp = () => {
 
     try {
       const response = await axios.get(URL);
+
       const data = response.data;
 
       if (data.cod === 200) {
