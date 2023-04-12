@@ -9,6 +9,8 @@ const SearchBar = ({ onSearch }) => {
     if (city) {
       onSearch(city);
       setCity("");
+    } else {
+      alert("Please, enter city name");
     }
   };
 
