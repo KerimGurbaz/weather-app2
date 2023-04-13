@@ -9,7 +9,7 @@ const CityCard = ({ city, onRemove }) => {
   return (
     <div className="city-card">
       <button className="remove-btn" onClick={() => onRemove(id)}>
-        &times;
+        x
       </button>
       <h2>
         {name}, {country}

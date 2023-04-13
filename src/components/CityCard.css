@@ -1,5 +1,5 @@
 .city-card {
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   border: 1px solid #ddd;
   border-radius: 2rem;
@@ -8,6 +8,7 @@
   position: relative;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid red; */
 }
 
 .city-card h2 {
@@ -28,10 +29,6 @@
   right: 5px;
   cursor: pointer;
   color: white;
-}
-
-.remove-btn:focus {
-  outline: none;
 }
 
 img {
